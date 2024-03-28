@@ -18,7 +18,7 @@ def harvest_resources(current_set):
                                 print(item["AphiaID"])
                                 species_ids.add(item["AphiaID"])
                                 with open('species_ids.txt', 'a') as species_file:
-                                    species_file.write(item["AphiaID"] + "\n")
+                                    species_file.write(str(item["AphiaID"]) + "\n")
                             else:
                                 next_iter_set.add(item["AphiaID"])
                 offset_counter += 50
